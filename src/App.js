@@ -8,6 +8,7 @@ import DotGroup from './scenes/DotGroup';
 import Skills from './scenes/Skills.jsx';
 import Projects from './scenes/Projects.jsx';
 import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
@@ -53,6 +54,7 @@ function App() {
       <div className="w-5/6 mx-auto">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
