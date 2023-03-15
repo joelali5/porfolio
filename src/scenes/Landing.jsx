@@ -7,7 +7,7 @@ export default function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
+    <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
       {/* IMAGE */}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
@@ -95,7 +95,7 @@ export default function Landing({ setSelectedPage }) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-            <SocialMediaIcons />
+          <SocialMediaIcons />
         </motion.div>
       </div>
     </section>

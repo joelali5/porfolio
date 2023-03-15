@@ -1,7 +1,6 @@
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import DotGroup from './DotGroup';
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
     const lowercasePage = page.toLowerCase();
@@ -41,11 +40,6 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage}) {
                             setSelectedPage={setSelectedPage}
                         />
                         <Link 
-                            page="About"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
-                        />
-                        <Link 
                             page="Contact"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
@@ -66,7 +60,7 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage}) {
                     {/* Close Menu */}
                     <div className="flex justify-end p-12">
                         <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                            <img alt="menu-icon" src="./../assets/menu-icon.svg"/>
+                            <img alt="menu-icon" src="./../assets/close-icon.svg"/>
                         </button>
                     </div>
                     {/* MENU ITEMS */}
@@ -83,11 +77,6 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage}) {
                         />
                         <Link 
                             page="Projects"
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
-                        />
-                        <Link 
-                            page="About"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
