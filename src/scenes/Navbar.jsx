@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 const Link = ({ page, selectedPage, setSelectedPage }) => {
     const lowercasePage = page.toLowerCase();
     return (
-        <AnchorLink className={`${selectedPage === lowercasePage ? "text-yellow" : ""} hover:text-yellow transition duration-500`} href={`#${lowercasePage}`} onClick={() => setSelectedPage(lowercasePage)}>
+        <AnchorLink className={`${selectedPage === lowercasePage ? "text-red text-lg" : ""} hover:text-red text-lg transition duration-500`} href={`#${lowercasePage}`} onClick={() => setSelectedPage(lowercasePage)}>
             {page}
         </AnchorLink>
     );
@@ -14,16 +14,16 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage}) {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 780px)");
-    const navbarBackground = isTopOfPage ? "" : "bg-red";
+    const navbarBackground = isTopOfPage ? "" : "bg-dark-grey";
 
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
-                <h4 className="font-playfair text-3xl font-bold">JJA</h4>
+                <h4 className="font-playfair text-3xl font-bold text-red">JJA</h4>
 
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
-                    <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+                    <div className="flex justify-between gap-16 font-opensans text-md font-bold text-l">
                         <Link 
                             page="Home"
                             selectedPage={selectedPage}
@@ -56,15 +56,15 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage}) {
             </div>
             {/* MOBILE VIEW MODE */}
             {!isAboveSmallScreens && isMenuToggled && (
-                <div className="fixed right-0 bottom-0 h-full bg-blue w-[350px]">
+                <div className="fixed right-0 bottom-0 h-full bg-light w-[350px]">
                     {/* Close Menu */}
                     <div className="flex justify-end p-12">
-                        <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <button onClick={() => setIsMenuToggled(!isMenuToggled)} className="bg-red p-2 rounded-3xl">
                             <img alt="menu-icon" src="./../assets/close-icon.svg"/>
                         </button>
                     </div>
                     {/* MENU ITEMS */}
-                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                    <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white font-bold">
                         <Link 
                             page="Home"
                             selectedPage={selectedPage}

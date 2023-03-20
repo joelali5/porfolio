@@ -1,31 +1,60 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import joel from "./../assets/joel.png";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
+import Typewriter from "typewriter-effect";
 
 export default function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+  const imageVariants = {
+    hidden: {
+      opacity: 0,
+      x: "100vw",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "tween",
+        duration: 1,
+      },
+    },
+  };
+
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
+    <section
+      id="home"
+      className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+    >
       {/* IMAGE */}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
+          <motion.div
+            className="relative z-0 ml-20"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <img
+              src={joel}
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 w-full max-w-[400px] md:max-w-[600px]"
-              src="../assets/profile-image.png"
+              className="w-full max-w-[300px] md:max-w-[500px] rounded-t-3xl"
             />
-          </div>
+          </motion.div>
         ) : (
-          <div>
+          <motion.div
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 w-full max-w-[400px] md:max-w-[600px]"
-              src="../assets/profile-image.png"
+              className="w-full max-w-[350px] md:max-w-[500px] rounded-t-2xl"
+              src={joel}
             />
-          </div>
+          </motion.div>
         )}
       </div>
 
@@ -40,19 +69,24 @@ export default function Landing({ setSelectedPage }) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Joel {""}
-            <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]">
-              Aliyu
-            </span>
+          <p className="text-5xl font-playfair z-10 text-center md:text-start md:mb-4">
+            Joel Aliyu
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+          <p className="mt-2 text-center md:text-left md:font-playfair text-2xl font-semibold text-red bg-gradient-rainblue bg-clip-text fill-transparent">
+            <Typewriter
+              options={{
+                strings: ["Software Developer", "Open Source Contributor"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </p>
+          <p className="mt-3 text-light mb-7 text-xl text-center md:text-start">
+            I am a very curious full-stack web developer who places a premium on
+            leaving a positive mark through the continual application of my core
+            principle of dedication. I come into web development with varied
+            scientific backgrounds and a fresh outlook. I'm currently putting in
+            a lot of effort every day to become a better professional.
           </p>
         </motion.div>
 
@@ -79,13 +113,13 @@ export default function Landing({ setSelectedPage }) {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
+            <div className="bg-dark-grey hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
               View Resume
             </div>
           </AnchorLink>
         </motion.div>
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
-
 import Navbar from './scenes/Navbar';
-import LineGradient from './components/LineGradient';
-import Landing from './scenes/Landing';
+import Home from './scenes/Home';
 import DotGroup from './scenes/DotGroup';
 import Skills from './scenes/Skills.jsx';
 import Projects from './scenes/Projects.jsx';
@@ -40,17 +38,14 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing setSelectedPage={setSelectedPage} />
+        <Home setSelectedPage={setSelectedPage} />
       </div>
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-auto md:mb-10">
         <Skills />
       </div>
-      <LineGradient />
       <div className="w-5/6 mx-auto">
         <Projects />
       </div>
-      <LineGradient />
       <div className="w-5/6 mx-auto">
         <Contact />
       </div>

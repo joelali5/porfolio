@@ -1,6 +1,6 @@
-import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import contact from "./../assets/contact.jpg";
 
 export default function Contact() {
   const {
@@ -15,7 +15,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-48">
+    <section id="contact" className="py-48 w-4/5 mx-auto">
       <motion.div
         className="flex justify-center w-full"
         initial="hidden"
@@ -28,17 +28,16 @@ export default function Contact() {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl mb-5">
-            <span className="text-red">CONTACT ME</span> TO GET STARTED
+          <p className="font-playfair font-semibold text-3xl mb-5">
+            Contact Me
           </p>
-          <div className="flex md:justify-center my-5">
-            <LineGradient width="w-1/2" />
-          </div>
+          <div className="flex md:justify-center my-5"></div>
         </div>
       </motion.div>
 
       <div className="md:flex md:justify-center gap-16 mt-5">
         <motion.div
+          className="md:w-1/2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -48,7 +47,7 @@ export default function Contact() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img src="../assets/contact-image.jpeg" alt="Contact" />
+          <img src={contact} alt="Contact" w-full />
         </motion.div>
         <motion.div
           className="basis-1/2 mt-10 md:mt-0"
@@ -68,7 +67,7 @@ export default function Contact() {
             method="POST"
           >
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
+              className="w-full bg-light font-semibold placeholder-opaque-black p-3"
               type="text"
               placeholder="NAME"
               {...register("name", { required: true, maxLength: 100 })}
@@ -82,7 +81,7 @@ export default function Contact() {
             )}
 
             <input
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-light font-semibold placeholder-opaque-black p-3 mt-5"
               type="email"
               placeholder="EMAIL"
               {...register("email", {
@@ -98,7 +97,7 @@ export default function Contact() {
             )}
 
             <textarea
-              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
+              className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5 bg-light"
               type="text"
               placeholder="MESSAGE"
               rows="4"
@@ -119,9 +118,9 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+              className="p-3 rounded-lg bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
             >
-              Send me a message
+              Send message
             </button>
           </form>
         </motion.div>

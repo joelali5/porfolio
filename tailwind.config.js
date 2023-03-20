@@ -6,10 +6,24 @@ module.exports = {
     extend: {
       colors: {
         "deep-blue": "#010026",
-        blue: "#404B42",
-        red: "#E24F13",
-        yellow: "#ADA453",
+        leetcode: "#F45539",
+        linkedin: "#0072b1",
+        github: "#171515",
+        twitter: "#1DA1F2",
+        react: "#5ED4F2",
+        html: "#f06529",
+        git: "#EB4C27",
+        css: "#244BDD",
+        mongo: "#3F9E38",
+        bootstrap: "#7A10F1",
+        postgres: "#32648C",
+        node: "#649C60",
+        mysql:"#01718B",
+        tailwind: "#37B6F0",
+        red: "#BF6520",
+        yellow: "#D5A858",
         grey: "#ededed",
+        light: '#DFD0A5',
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
@@ -18,7 +32,7 @@ module.exports = {
           "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
 
         "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+          "linear-gradient(90deg, #BF6520 14.53%, #D5A858 69.36%, #DFD0A5 117.73%)",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],

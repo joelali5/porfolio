@@ -1,4 +1,3 @@
-import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 
 const container = {
@@ -21,10 +20,6 @@ const Project = ({ title }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Projects Projects Projects Projects Projects Projects Projects
-          Projects Projects Projects Projects Projects Projects Projects
-        </p>
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
@@ -33,7 +28,7 @@ const Project = ({ title }) => {
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-16 pb-16">
       <motion.div
         className="md:w-2/4 mx-auto text-center"
         initial="hidden"
@@ -45,17 +40,12 @@ export default function Projects() {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JECTS
+          <p className="font-playfair font-semibold text-3xl">
+            Projects
           </p>
           <div className="flex justify-center mt-5">
-            <LineGradient width="w-1/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          my skills my skills my skills my skills my skills my skills my skills
-          my skills my skills my skills my skills my skills my skills my skills
-        </p>
       </motion.div>
       <div className="flex justify-center">
         <motion.div
@@ -65,10 +55,10 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          <div className="flex justify-center items-center text-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
-            BEAUTIFUL USER INTERFACES
+          <div className="flex justify-center items-center text-center p-10 bg-light text-yellow max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+            Projects Links
           </div>
-          <Project title="project 1" />
+          <Project title="news" />
           <Project title="project 2" />
 
           <Project title="project 3" />
@@ -76,10 +66,6 @@ export default function Projects() {
           <Project title="project 5" />
 
           <Project title="project 6" />
-          <Project title="project 7" />
-          <div className="flex justify-center items-center text-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
-            SMOOTH USER EXPERIENCE
-          </div>
         </motion.div>
       </div>
     </section>
