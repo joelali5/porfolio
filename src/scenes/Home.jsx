@@ -24,9 +24,9 @@ export default function Landing({ setSelectedPage }) {
   };
 
   return (
-    <section
+    <div
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+      className="md:flex md:justify-between md:items-center gap-16 py-10 w-5/6 mx-auto md:h-full"
     >
       {/* IMAGE */}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
@@ -72,7 +72,7 @@ export default function Landing({ setSelectedPage }) {
           <p className="text-5xl font-playfair z-10 text-center md:text-start md:mb-4">
             Joel Aliyu
           </p>
-          <p className="mt-2 text-center md:text-left md:font-playfair text-2xl font-semibold text-red bg-gradient-rainblue bg-clip-text fill-transparent">
+          <p className="mt-2 text-center md:text-left md:font-playfair text-2xl font-semibold text-light bg-gradient-rainblue bg-clip-text fill-transparent">
             <Typewriter
               options={{
                 strings: ["Software Developer", "Open Source Contributor"],
@@ -81,7 +81,7 @@ export default function Landing({ setSelectedPage }) {
               }}
             />
           </p>
-          <p className="mt-3 text-light mb-7 text-xl text-center md:text-start">
+          <p className="mt-3 mb-7 text-xl text-center md:text-start">
             I am a very curious full-stack web developer who places a premium on
             leaving a positive mark through the continual application of my core
             principle of dedication. I come into web development with varied
@@ -132,6 +132,6 @@ export default function Landing({ setSelectedPage }) {
           <SocialMediaIcons />
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

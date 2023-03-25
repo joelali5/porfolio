@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
-import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from './scenes/Navbar';
 import Home from './scenes/Home';
-import DotGroup from './scenes/DotGroup';
 import Skills from './scenes/Skills.jsx';
 import Projects from './scenes/Projects.jsx';
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
 
   useEffect(() => {
@@ -31,24 +29,12 @@ function App() {
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediumScreens && (
-          <DotGroup 
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
-        <Home setSelectedPage={setSelectedPage} />
-      </div>
-      <div className="w-5/6 mx-auto md:h-auto md:mb-10">
-        <Skills />
-      </div>
-      <div className="w-5/6 mx-auto">
-        <Projects />
-      </div>
-      <div className="w-5/6 mx-auto">
-        <Contact />
-      </div>
+      <Routes>
+        <Route path="/Home" element={<Home setSelectedPage={setSelectedPage} />}/>
+        <Route path="skills" element={<Skills />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -13,9 +13,26 @@ import { GrMysql } from "react-icons/gr";
 import { BsFillBootstrapFill } from "react-icons/bs";
 
 export default function Skills() {
+
+  const skillsVariants = {
+    hidden: {
+      opacity: 0,
+      x: "100vh",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "tween",
+        delay: 0.5,
+        duration: 1.5,
+      },
+    },
+  };
+
   return (
-    <section id="skills" className="pt-0 pb-5">
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+    <div className="h-full pt-0 pb-5 w-5/6 mx-auto md:mb-10">
+      <div className="md:flex md:justify-between md:gap-16 mt-80">
         <motion.div
           className="w-full"
           initial="hidden"
@@ -33,17 +50,11 @@ export default function Skills() {
         </motion.div>
       </div>
 
-      {/* SKILLS */}
       <motion.div
         className="flex justify-center items-center flex-wrap gap-8 md:w-4/5 mx-auto mt-8 p-6 shadow-lg shadow-light"
+        variants={skillsVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        animate="visible"
       >
         <FaReact className="w-16 h-16 md:w-32 md:h-32 text-react" />
         <BsGit className="w-16 h-16 md:w-32 md:h-32 text-git" />
@@ -57,6 +68,6 @@ export default function Skills() {
         <BsFillBootstrapFill className="w-16 h-16 md:w-32 md:h-32 text-bootstrap" />
         <SiExpress className="w-16 h-16 md:w-32 md:h-32" />
       </motion.div>
-    </section>
+    </div>
   );
 }
