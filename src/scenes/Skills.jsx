@@ -24,32 +24,14 @@ export default function Skills() {
       x: 0,
       transition: {
         type: "tween",
-        delay: 0.5,
+        delay: 0.3,
         duration: 1.5,
       },
     },
   };
 
   return (
-    <div className="h-full pt-0 pb-5 w-5/6 mx-auto md:mb-10">
-      <div className="md:flex md:justify-between md:gap-16 mt-80">
-        <motion.div
-          className="w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <p className="font-playfair font-semibold text-3xl mb-7 text-center">
-            Tools & Tech
-          </p>
-        </motion.div>
-      </div>
-
+    <div className="h-full flex flex-col justify-center items-center pt-0 pb-5 w-5/6 mx-auto md:mb-10">
       <motion.div
         className="flex justify-center items-center flex-wrap gap-8 md:w-4/5 mx-auto mt-8 p-6 shadow-lg shadow-light"
         variants={skillsVariants}

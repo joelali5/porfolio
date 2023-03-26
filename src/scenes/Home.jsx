@@ -23,9 +23,29 @@ export default function Landing({ setSelectedPage }) {
     },
   };
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1.5,
+        duration: 1.5,
+      },
+      exit: {
+        x: "-100vw",
+        transition: {ease: 'easeInOut'}
+      },
+    },
+  };
+
   return (
-    <div
-      id="home"
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       className="md:flex md:justify-between md:items-center gap-16 py-10 w-5/6 mx-auto md:h-full"
     >
       {/* IMAGE */}
@@ -34,8 +54,6 @@ export default function Landing({ setSelectedPage }) {
           <motion.div
             className="relative z-0 ml-20"
             variants={imageVariants}
-            initial="hidden"
-            animate="visible"
           >
             <img
               src={joel}
@@ -132,6 +150,6 @@ export default function Landing({ setSelectedPage }) {
           <SocialMediaIcons />
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

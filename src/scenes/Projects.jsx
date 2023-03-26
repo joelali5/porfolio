@@ -28,26 +28,8 @@ const Project = ({ title }) => {
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-16 pb-16">
-      <motion.div
-        className="md:w-2/4 mx-auto text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, y: -50 },
-          visible: { opacity: 1, y: 0 },
-        }}
-      >
-        <div>
-          <p className="font-playfair font-semibold text-3xl">
-            Projects
-          </p>
-          <div className="flex justify-center mt-5">
-          </div>
-        </div>
-      </motion.div>
-      <div className="flex justify-center">
+    <section className="pt-16 pb-16">
+      <div className="flex justify-center mt-32">
         <motion.div
           className="sm:grid sm:grid-cols-3"
           initial="hidden"

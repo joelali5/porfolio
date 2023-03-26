@@ -2,9 +2,9 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function Footer() {
   return (
-    <footer className="pt-2 flex flex-col justify-center items-center bg-deep-blue">
+    <footer className="flex flex-col justify-center items-center bg-deep-blue">
           <SocialMediaIcons />
-          <p className="font-playfair text-md text-yallow mb-5">©2023. All Rights Reserved.</p>
+          <p className="font-playfair text-md text-yallow mb-1">©2023. All Rights Reserved.</p>
     </footer>
   );
 }

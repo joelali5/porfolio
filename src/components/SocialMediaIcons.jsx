@@ -6,7 +6,7 @@ export default function SocialMediaIcons() {
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.linkedin.com/aliyu-joel"
+        href="https://www.linkedin.com/in/joel-aliyu/"
         target="_blank"
         rel="noreferrer"
       >

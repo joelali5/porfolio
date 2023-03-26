@@ -48,7 +48,7 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
           initial="hidden"
           animate="visible"
         >
-          JAliyu
+          <Link to="/Home">JAliyu</Link>
         </motion.h4>
 
         {/* DESKTOP NAV */}
