@@ -94,9 +94,9 @@ export default function Contact() {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-3xl mb-5">
+          {/* <p className="font-playfair font-semibold text-3xl mb-5">
             Contact Me
-          </p>
+          </p> */}
           <div className="flex md:justify-center my-5"></div>
         </div>
       </motion.div>
