@@ -11,6 +11,7 @@ import { AnimatePresence } from "framer-motion";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const location = useLocation();
 
@@ -30,13 +31,25 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
+        showModal={showModal}
+        setShowModal={setShowModal}
       />
+      <Contact showModal={showModal} setShowModal={setShowModal} />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
-          <Route path="/Home" element={<Home setSelectedPage={setSelectedPage} />}/>
+          <Route
+            path="/Home"
+            element={
+              <Home
+                setSelectedPage={setSelectedPage}
+                showModal={showModal}
+                setShowModal={setShowModal}
+              />
+            }
+          />
           <Route path="skills" element={<Skills />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="contact" element={<Contact />} />
+          {/* <Route path="contact" element={<Contact showModal={showModal} setShowModal={setShowModal} />} /> */}
         </Routes>
       </AnimatePresence>
       <Footer />

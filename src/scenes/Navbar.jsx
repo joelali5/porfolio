@@ -3,7 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Element = ({ page, selectedPage, setSelectedPage }) => {
+const Element = ({ page, selectedPage, setSelectedPage, setShowModal }) => {
   const lowercasePage = page.toLowerCase();
   return (
     <Link

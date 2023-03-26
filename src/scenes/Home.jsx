@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Typewriter from "typewriter-effect";
 
-export default function Landing({ setSelectedPage }) {
+export default function Landing({ setSelectedPage, setShowModal }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   const imageVariants = {
@@ -121,7 +121,7 @@ export default function Landing({ setSelectedPage }) {
         >
           <AnchorLink
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
+            onClick={() => setShowModal(true)}
             href="#contact"
           >
             Contact Me
