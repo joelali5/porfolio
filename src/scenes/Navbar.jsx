@@ -65,12 +65,12 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
               setSelectedPage={setSelectedPage}
             />
             <Element
-              page="Skills"
+              page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
-              page="Projects"
+              page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -103,18 +103,18 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
           </div>
           {/* MENU ITEMS */}
           <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white font-bold">
-            <Element
+          <Element
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
-              page="Skills"
+              page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
-              page="Projects"
+              page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

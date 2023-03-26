@@ -46,10 +46,10 @@ export default function Landing({ setSelectedPage }) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="md:flex md:justify-between md:items-center gap-16 py-10 w-5/6 mx-auto md:h-full"
+      className="md:flex md:justify-between md:items-center gap-10 py-10 w-5/6 mx-auto md:h-full"
     >
       {/* IMAGE */}
-      <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
+      <div className="md:order-2 flex justify-center z-10 mt-10 md:mt-32">
         {isAboveMediumScreens ? (
           <motion.div
             className="relative z-0 ml-20"
