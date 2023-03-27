@@ -3,7 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Element = ({ page, selectedPage, setSelectedPage }) => {
+const Element = ({ page, pageName, selectedPage, setSelectedPage }) => {
   const lowercasePage = page.toLowerCase();
   return (
     <Link
@@ -13,7 +13,7 @@ const Element = ({ page, selectedPage, setSelectedPage }) => {
       href={`#${lowercasePage}`}
       onClick={() => setSelectedPage(lowercasePage)}
       to={page}
-    >{page}</Link>
+    >{pageName}</Link>
   );
 };
 
@@ -48,7 +48,7 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
           initial="hidden"
           animate="visible"
         >
-          <Link to="/Home">JAliyu</Link>
+          <Link to="/">JA</Link>
         </motion.h4>
 
         {/* DESKTOP NAV */}
@@ -60,22 +60,26 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
             animate="visible"
           >
             <Element
-              page="Home"
+              page="/"
+              pageName="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Projects"
+              pageName="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Skills"
+              pageName="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Contact"
+              pageName="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -104,22 +108,26 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
           {/* MENU ITEMS */}
           <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white font-bold">
           <Element
-              page="Home"
+              page="/"
+              pageName="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Projects"
+              pageName="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Skills"
+              pageName="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Element
               page="Contact"
+              pageName="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

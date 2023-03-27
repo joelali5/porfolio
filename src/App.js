@@ -33,7 +33,7 @@ function App() {
       />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
-          <Route path="/Home" element={<Home setSelectedPage={setSelectedPage} />}/>
+          <Route path="/" element={<Home setSelectedPage={setSelectedPage} />}/>
           <Route path="skills" element={<Skills />} />
           <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
