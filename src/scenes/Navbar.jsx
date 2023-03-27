@@ -3,20 +3,6 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Element = ({ page, pageName, selectedPage, setIsMenuToggled, setSelectedPage }) => {
-  const lowercasePage = page.toLowerCase();
-  return (
-    <Link
-      className={`${
-        selectedPage === lowercasePage ? "text-light text-lg" : ""
-      } hover:text-light text-lg transition duration-500`}
-      href={`#${lowercasePage}`}
-      onClick={() => setIsMenuToggled(false)}
-      to={page}
-    >{pageName}</Link>
-  );
-};
-
 export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const navbarVariant = {
     hidden: {
@@ -38,6 +24,32 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 780px)");
   const navbarBackground = isTopOfPage ? "" : "bg-deep-blue";
+
+  const Element = ({
+    page,
+    pageName,
+    selectedPage,
+    setIsMenuToggled,
+    setSelectedPage,
+  }) => {
+    const lowercasePage = page.toLowerCase();
+    return (
+      <Link
+        className={`${
+          selectedPage === lowercasePage ? "text-light text-lg" : ""
+        } hover:text-light text-lg transition duration-500`}
+        href={`#${lowercasePage}`}
+        onClick={
+          isAboveSmallScreens
+            ? () => setSelectedPage(lowercasePage)
+            : () => setIsMenuToggled(false)
+        }
+        to={page}
+      >
+        {pageName}
+      </Link>
+    );
+  };
 
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 mt-0 `}>
@@ -107,7 +119,7 @@ export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
           </div>
           {/* MENU ITEMS */}
           <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white font-bold">
-          <Element
+            <Element
               page="/"
               pageName="Home"
               selectedPage={selectedPage}
