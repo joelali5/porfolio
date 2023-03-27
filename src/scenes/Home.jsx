@@ -1,9 +1,9 @@
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import joel from "./../assets/joel.png";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import { motion } from "framer-motion";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 export default function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -35,7 +35,7 @@ export default function Landing({ setSelectedPage }) {
       },
       exit: {
         x: "-100vw",
-        transition: {ease: 'easeInOut'}
+        transition: { ease: "easeInOut" },
       },
     },
   };
@@ -51,10 +51,7 @@ export default function Landing({ setSelectedPage }) {
       {/* IMAGE */}
       <div className="md:order-2 flex justify-center z-10 mt-10 md:mt-32">
         {isAboveMediumScreens ? (
-          <motion.div
-            className="relative z-0 ml-20"
-            variants={imageVariants}
-          >
+          <motion.div className="relative z-0 ml-20" variants={imageVariants}>
             <img
               src={joel}
               alt="profile"
@@ -119,22 +116,24 @@ export default function Landing({ setSelectedPage }) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          <Link
+            to="/contact"
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
-            href="#contact"
           >
             Contact Me
-          </AnchorLink>
-          <AnchorLink
+          </Link>
+          <a
+            href="https://read.cv/joelali5"
+            target="_blank"
+            rel="noreferrer"
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
-            href="#contact"
           >
             <div className="bg-dark-grey hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
               View Resume
             </div>
-          </AnchorLink>
+          </a>
         </motion.div>
         <motion.div
           className="flex justify-center md:justify-start"
