@@ -3,7 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Element = ({ page, pageName, selectedPage, setSelectedPage }) => {
+const Element = ({ page, pageName, selectedPage, setIsMenuToggled, setSelectedPage }) => {
   const lowercasePage = page.toLowerCase();
   return (
     <Link
@@ -11,7 +11,7 @@ const Element = ({ page, pageName, selectedPage, setSelectedPage }) => {
         selectedPage === lowercasePage ? "text-light text-lg" : ""
       } hover:text-light text-lg transition duration-500`}
       href={`#${lowercasePage}`}
-      onClick={() => setSelectedPage(lowercasePage)}
+      onClick={() => setIsMenuToggled(false)}
       to={page}
     >{pageName}</Link>
   );
