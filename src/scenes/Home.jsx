@@ -41,7 +41,7 @@ export default function Landing({ setSelectedPage }) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="xs:mb-20 md:mb-0 mt-32 py-10 w-2/3 mx-auto md:h-2/5 lg:w-1/2"
+      className="xs:mb-20 md:mb-20 mt-32 py-10 w-2/3 mx-auto md:h-2/5 lg:w-1/2 pb-32"
       id="/"
     >
       <p className="text-6xl font-opensans font-bold">

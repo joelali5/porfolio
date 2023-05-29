@@ -34,7 +34,7 @@ export default function Navbar({ isTopOfPage }) {
           initial="hidden"
           animate="visible"
         >
-          <Link to="/">Codeguy</Link>
+          <Link to="/" className="cursor-pointer">Codeguy</Link>
         </motion.h4>
 
         {/* DESKTOP NAV */}
