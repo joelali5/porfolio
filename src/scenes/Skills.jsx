@@ -31,7 +31,8 @@ export default function Skills() {
   };
 
   return (
-    <div className="h-full flex flex-col justify-center items-center pt-0 pb-5 w-5/6 mx-auto md:mb-10">
+    <div className="w-full bg-white h-1/2" id="skills">
+      <div className="h-full flex flex-col justify-center items-center pt-0 pb-5 w-1/2 mx-auto md:mb-10">
       <motion.div
         className="flex justify-center items-center flex-wrap gap-8 md:w-4/5 mx-auto mt-8 p-6 shadow-lg shadow-light"
         variants={skillsVariants}
@@ -50,6 +51,7 @@ export default function Skills() {
         <BsFillBootstrapFill className="w-16 h-16 md:w-32 md:h-32 text-bootstrap" />
         <SiExpress className="w-16 h-16 md:w-32 md:h-32" />
       </motion.div>
+    </div>
     </div>
   );
 }

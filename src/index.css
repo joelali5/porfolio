@@ -4,12 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+.underline {
+  border-bottom-width: 2px;
+}
+
+body {
+  background-color: #111111;
+}
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body,
 #root,
-.app{
-    height: 100%;
-    background-color: #000;
-    @apply text-white;
+.app {
+  height: 100%;
+  @apply text-white;
 }

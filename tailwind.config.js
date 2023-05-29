@@ -18,12 +18,15 @@ module.exports = {
         bootstrap: "#7A10F1",
         postgres: "#32648C",
         node: "#649C60",
-        mysql:"#01718B",
+        mysql: "#01718B",
         tailwind: "#37B6F0",
         red: "#BF6520",
         yellow: "#D5A858",
-        grey: "#ededed",
-        light: '#CDC26F',
+        grey: "#525252",
+        grey2: "#313131",
+        black: "#111111",
+        onscroll: "#31323D",
+        light: "#E5D5AB",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
@@ -37,6 +40,25 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
+      },
+      animation: {
+        blob: "blob 7s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "33%": {
+            transform: "scale(1.1)",
+          },
+          "66%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
       },
     },
     screens: {

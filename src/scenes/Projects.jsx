@@ -18,8 +18,11 @@ const projectVariant = {
 
 export default function Projects() {
   return (
-    <section className="pt-16 pb-16">
-      <div className="flex justify-center mt-32">
+    <section className="bg-white pt-16 pb-16 w-full" id="projects">
+      <p className="text-grey text-center font-bold text-3xl font-playfair md:h-1/2 m-0">
+        Portfolio
+      </p>
+      <div className="flex justify-center mt-16 w-3/4 md:w-2/3 lg:w-1/2 mx-auto">
         <motion.div
           className="grid md:grid-cols-3 gap-5"
           initial="hidden"
@@ -27,7 +30,7 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          <div className="flex justify-center items-center text-center p-10 bg-light text-yellow max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          <div className="flex justify-center items-center text-center p-10 bg-grey text-white max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             Projects Links
           </div>
           <motion.a
@@ -78,7 +81,7 @@ export default function Projects() {
             <img src={foody} alt="foody" className="w-full h-full" />
           </motion.a>
 
-          <div className="flex justify-center items-center text-center p-10 bg-light text-yellow max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          <div className="flex justify-center items-center text-center p-10 bg-grey text-white max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             Projects Links
           </div>
         </motion.div>

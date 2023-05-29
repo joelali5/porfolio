@@ -10,7 +10,7 @@ export default function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <BsLinkedin className="text-3xl text-linkedin" />
+        <BsLinkedin className="text-xl text-linkedin" />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -18,7 +18,7 @@ export default function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <BsTwitter className="text-3xl text-twitter" />
+        <BsTwitter className="text-xl text-twitter" />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -26,7 +26,7 @@ export default function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <BsGithub className="text-3xl" />
+        <BsGithub className="text-xl text-black" />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -34,7 +34,7 @@ export default function SocialMediaIcons() {
         target="_blank"
         rel="noreferrer"
       >
-        <SiLeetcode className="text-3xl text-leetcode" />
+        <SiLeetcode className="text-xl text-leetcode" />
       </a>
     </div>
   );
