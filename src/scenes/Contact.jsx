@@ -171,7 +171,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="p-3 rounded-lg bg-light font-semibold text-deep-blue mt-5 hover:bg-yellow hover:text-white hover:border-2 transition duration-500"
+                className="p-3 rounded-lg bg-light font-semibold text-grey mt-5 hover:bg-yellow hover:text-white hover:border-2 transition duration-500"
                 variants={buttonVariant}
                 whileHover="hover"
               >

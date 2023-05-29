@@ -1,11 +1,14 @@
 import joel from "../assets/joel.png";
 import Typewriter from "typewriter-effect";
 import SocialMediaIcons from "./../components/SocialMediaIcons";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function About() {
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
   return (
     <div className="bg-white h-auto py-5 w-full pt-32" id="about">
-      <h2 className="text-center font-playfair font-bold text-2xl text-grey mb-5 pb-16">
+      <h2 className="text-center font-playfair font-bold text-2xl text-grey mb-5 pb-5">
         About
       </h2>
       <div className="md:w-1/2 md:flex justify-between mx-auto">
@@ -39,7 +42,7 @@ export default function About() {
             scientific backgrounds and a fresh outlook. I'm currently putting in
             a lot of effort to become a better professional.
           </p>
-          <SocialMediaIcons />
+          {isAboveMediumScreens && <SocialMediaIcons />}
         </div>
       </div>
     </div>
