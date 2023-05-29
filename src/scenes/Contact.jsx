@@ -72,13 +72,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-32">
       <motion.section
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="md:w-2/3 mx-auto mb-40 pb-10"
+        className="md:w-2/3 mx-auto pb-10"
         id="contact"
       >
         <motion.div

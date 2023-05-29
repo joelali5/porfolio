@@ -4,8 +4,8 @@ import SocialMediaIcons from "./../components/SocialMediaIcons";
 
 export default function About() {
   return (
-    <div className="bg-white h-auto py-5 w-full" id="about">
-      <h2 className="text-center font-playfair font-bold text-2xl text-grey mb-5">
+    <div className="bg-white h-auto py-5 w-full pt-32" id="about">
+      <h2 className="text-center font-playfair font-bold text-2xl text-grey mb-5 pb-16">
         About
       </h2>
       <div className="md:w-1/2 md:flex justify-between mx-auto">

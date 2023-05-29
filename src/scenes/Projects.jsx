@@ -18,7 +18,7 @@ const projectVariant = {
 
 export default function Projects() {
   return (
-    <section className="bg-white pt-16 pb-16 w-full" id="projects">
+    <section className="bg-white pb-16 w-full pt-32" id="projects">
       <p className="text-grey text-center font-bold text-3xl font-playfair md:h-1/2 m-0">
         Portfolio
       </p>
