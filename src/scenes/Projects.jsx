@@ -22,9 +22,9 @@ export default function Projects() {
       <p className="text-grey text-center font-bold text-3xl font-playfair md:h-1/2 m-0">
         Portfolio
       </p>
-      <div className="flex justify-center mt-16 w-3/4 md:w-2/3 lg:w-1/2 mx-auto">
+      <div className="flex justify-center mt-16 md:w-4/5 lg:w-2/3 mx-auto">
         <motion.div
-          className="grid md:grid-cols-3 gap-5"
+          className="grid ss:px-16 ss:grid-cols-2 md:grid-cols-3 gap-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

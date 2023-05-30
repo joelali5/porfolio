@@ -78,7 +78,7 @@ export default function Contact() {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="md:w-2/3 mx-auto pb-10"
+        className="w-full mx-auto pb-10"
         id="contact"
       >
         <motion.div
@@ -97,9 +97,9 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="md:flex justify-center gap-16 mt-5 w-3/4 md: mx-auto">
+        <div className="md:flex justify-center gap-16 mt-5 mx-auto md:w-2/3 lg:w-3/5">
           <motion.div
-            className="md:w-1/2"
+            className="w-1/2"
             variants={contactImageVariants}
             initial="hidden"
             animate="visible"
@@ -107,7 +107,7 @@ export default function Contact() {
             <img src={contact} alt="Contact" w-full />
           </motion.div>
           <motion.div
-            className="basis-1/2 mt-10 md:mt-0"
+            className="w-1/2 mt-10 md:mt-0"
             variants={contactFormVariant}
             initial="hidden"
             animate="visible"

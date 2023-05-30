@@ -1,22 +1,6 @@
 import { motion } from "framer-motion";
 
 export default function Landing({ setSelectedPage }) {
-  // const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
-  // const imageVariants = {
-  //   hidden: {
-  //     opacity: 0,
-  //     x: "100vw",
-  //   },
-  //   visible: {
-  //     opacity: 1,
-  //     x: 0,
-  //     transition: {
-  //       type: "tween",
-  //       duration: 1,
-  //     },
-  //   },
-  // };
 
   const containerVariants = {
     hidden: {
@@ -41,7 +25,7 @@ export default function Landing({ setSelectedPage }) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="xs:mb-20 md:mb-20 mt-32 py-10 w-2/3 mx-auto md:h-2/5 lg:w-1/2 pb-32"
+      className="w-4/5 md:w-2/3 xs:mb-20 md:mb-20 mt-32 py-10 mx-auto md:h-2/5 lg:w-1/2 pb-32"
       id="/"
     >
       <p className="text-6xl font-opensans font-bold">
